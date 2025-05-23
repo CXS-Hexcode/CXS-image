@@ -1,5 +1,6 @@
 # 🖼️ CXS-image – Outil d’analyse EXIF avec interface graphique
-
+<p align="center">
+   <img src="CXS-exif.png" width="100%">
 **CXS-image** est une application Python avec une interface élégante (Tkinter) qui permet d’extraire, visualiser et exporter toutes les métadonnées EXIF d’une image, y compris les **coordonnées GPS** si elles sont présentes.
 
 ---
