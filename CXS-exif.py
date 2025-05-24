@@ -206,8 +206,6 @@ class EXIFViewer(QWidget):
         self.btn_copy = QPushButton("📤 Copier les données")
         self.btn_copy.setEnabled(False)
         self.btn_copy.clicked.connect(self.copy_to_clipboard)
-
-        # Ajouter la case à cocher pour afficher les données techniques (Autre)
         self.show_all_checkbox = QCheckBox("Afficher les données techniques")
         self.show_all_checkbox.setChecked(False)
 
@@ -234,7 +232,6 @@ class EXIFViewer(QWidget):
         self.tree.clear()
         grouped = format_exif_data(self.exif_data)
         for category, entries in grouped.items():
-            # Filtrer les catégories "Autre" si l'utilisateur a coché l'option
             if not self.show_all_checkbox.isChecked() and category == "Autre":
                 continue
             cat_item = QTreeWidgetItem([category])
